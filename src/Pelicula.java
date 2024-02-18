@@ -17,4 +17,37 @@ public class Pelicula {
         this.titulo = titulo;
         this.duracion = duracion;
     }
+
+    /**
+     * Obtiene el título de la película.
+     *
+     * @return El título de la película.
+     */
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    /**
+     * Obtiene la duración de la película en minutos.
+     *
+     * @return La duración de la película.
+     */
+
+    public int getDuracion() {
+        return duracion;
+    }
+
+    /**
+     * Representación en formato de cadena de la película.
+     * Devuelve el título de la película.
+     *
+     * @return El título de la película.
+     */
+
+    @Override
+    public String toString() {
+        return titulo;
+    }
+
 }
