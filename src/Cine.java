@@ -28,6 +28,16 @@ public class Cine {
         public Sala[] getSalas() {
             return salas;
         }
+        public void mostrarSalas() {
+            // mprime un mensaje que indica el nombre del cine y que se utilizar� para
+            // identificar la secci�n de salas.
+            Sala[] lista = getSalas();
+            for (int i = 0; i < lista.length; i++) {
+                System.out.println("Salas disponibles en " + lista[i]);
+                // Inicia un bucle for-each, que itera sobre cada elemento (sala) en el arreglo
+                // salas.
+            }
+        }
 
     }
 }
