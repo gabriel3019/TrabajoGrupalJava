@@ -89,6 +89,12 @@ public class Sala {
                 }
                 System.out.println();
             }
+            public String toString() {
+                // Construye y retorna una cadena que incluye el n�mero de la sala y el t�tulo
+                // de la pel�cula. Esta cadena se utiliza para representar la instancia de la
+                // clase como una cadena de texto.
+                return "Sala " + numero + ": " + pelicula;
+            }
         }
     }
 }
