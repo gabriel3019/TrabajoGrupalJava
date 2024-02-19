@@ -22,6 +22,12 @@ public class Cine {
         for (int i = 0; i < salas.length; i++) {
             salas[i] = new Sala(i + 1);
         }
+        /**
+         * Recibe el valor de salas desde la clase salas el cual , es una varibale la cual inicializaremos en el propio main
+         */
+        public Sala[] getSalas() {
+            return salas;
+        }
 
     }
 }
