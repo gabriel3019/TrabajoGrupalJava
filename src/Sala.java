@@ -37,4 +37,15 @@ public class Sala {
         // proyectada en la sala.
         return pelicula;
     }
+
+    /**
+     *
+     * @param pelicula es valor que recibe de la clase pelicula
+     *                el cual al valor de elegir pelicula le hemos llamado también pelicula
+     */
+    public void setPelicula(Pelicula pelicula) {
+        // Asigna el valor del par�metro pelicula al atributo pelicula de la instancia
+        // de la clase Sala
+        this.pelicula = pelicula;
+    }
 }
