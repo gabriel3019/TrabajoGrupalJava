@@ -16,4 +16,15 @@ public class Sala {
         // seg�n sea necesario.
         this.butacas = new boolean[10][10];
     }
+    /**
+     * Aqui nos devuelve el valor del numero introducido desde el main
+     * el cual el valor es introducido por el usuario
+     *
+     */
+
+    public int getNumero() {
+        // Retorna el valor del atributo numero, que representa el n�mero identificativo
+        // de la sala.
+        return numero;
+    }
 }
