@@ -38,6 +38,17 @@ public class Cine {
                 // salas.
             }
         }
-
+        public void verInfoPeliculas() {
+            // Inicia un bucle for-each, que itera sobre cada elemento (sala) en el arreglo
+            // salas
+            for (int i = 0; i < salas.length; i++) {
+                // Imprime informaci�n sobre cada sala, incluyendo su n�mero y la pel�cula que
+                // proyecta. Utiliza los m�todos getNumero y getPelicula de la clase Sala para
+                // obtener esta informaci�n.
+                System.out.println("Sala Numero: " + i );
+                System.out.println("Pelicula: " + getSalas()[i].getPelicula().getTitulo());
+                System.out.println("Duraci�n: " + getSalas()[i].getPelicula().getDuracion() + " minutos");
+            }
+        }
     }
 }
