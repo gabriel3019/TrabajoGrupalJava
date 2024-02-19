@@ -27,4 +27,14 @@ public class Sala {
         // de la sala.
         return numero;
     }
+    /**
+     * Aqui nos devuelve el valor el cual es introducido desde la clase pelicula
+     * y nos devuelve el nombre de la pelicula
+     * el cual lo hemos introducidpo a traves de unos set en el main
+     */
+    public Pelicula getPelicula() {
+        // Retorna el valor del atributo pelicula, que almacena el t�tulo de la pel�cula
+        // proyectada en la sala.
+        return pelicula;
+    }
 }
