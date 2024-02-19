@@ -48,4 +48,32 @@ public class Sala {
         // de la clase Sala
         this.pelicula = pelicula;
     }
+
+    /**
+     *
+     * @param fila para recoger la variable de fila
+     *             otra clase que hemos introducido para asignar la fila que quiere el usuario
+     * @param columna para recoger la variable de columna otra clase
+     *               que hemos introducido para asignar la columna que quiera el usuario
+     * @param email para recoger la variable de el email para identicar al usuario
+     *              el cual hemos introducido en otra clase la cual arrastramos a esta
+     */
+    public void reservarButaca(int fila, int columna, String email) {
+        // Verifica si la fila y columna proporcionadas est�n dentro del rango v�lido
+        // (entre 1 y 10).
+        if (fila >= 1 && fila <= 10 && columna >= 1 && columna <= 10) {
+            // erifica si la butaca en la fila y columna especificadas est� disponible (no
+            // ocupada).
+            if (!butacas[fila - 1][columna - 1]) {
+                // Marca la butaca como ocupada si est� disponible.
+                butacas[fila - 1][columna - 1] = true;
+
+                System.out.println("Entrada reservada con �xito para " + email);
+            } else {
+                System.out.println("La butaca ya est� ocupada.");
+            }
+        } else {
+            System.out.println("Butaca no v�lida.");
+        }
+    }
 }
