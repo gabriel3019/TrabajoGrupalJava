@@ -75,5 +75,20 @@ public class Sala {
         } else {
             System.out.println("Butaca no v�lida.");
         }
+
+        public void mostrarEstado(){
+            System.out.println("Estado de la sala " + numero + ":");
+            // nicia un bucle que recorre cada fila de butacas en la sala.
+            for (int i = 0; i < butacas.length; i++) {
+                // Dentro del bucle anterior, inicia otro bucle que recorre cada columna de
+                // butacas en la fila actual.
+                for (int j = 0; j < butacas[i].length; j++) {
+                    // Imprime 'X' si la butaca en la posici�n actual est� ocupada (valor true), y
+                    // 'O' si est� libre (valor false).
+                    System.out.print(butacas[i][j] ? "X " : "O ");
+                }
+                System.out.println();
+            }
+        }
     }
 }
