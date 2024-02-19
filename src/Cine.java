@@ -22,13 +22,14 @@ public class Cine {
         for (int i = 0; i < salas.length; i++) {
             salas[i] = new Sala(i + 1);
         }
+    }
         /**
          * Recibe el valor de salas desde la clase salas el cual , es una varibale la cual inicializaremos en el propio main
          */
-        public Sala[] getSalas() {
+        public Sala[] getSalas () {
             return salas;
         }
-        public void mostrarSalas() {
+        public void mostrarSalas () {
             // mprime un mensaje que indica el nombre del cine y que se utilizar� para
             // identificar la secci�n de salas.
             Sala[] lista = getSalas();
@@ -38,14 +39,14 @@ public class Cine {
                 // salas.
             }
         }
-        public void verInfoPeliculas() {
+        public void verInfoPeliculas () {
             // Inicia un bucle for-each, que itera sobre cada elemento (sala) en el arreglo
             // salas
             for (int i = 0; i < salas.length; i++) {
                 // Imprime informaci�n sobre cada sala, incluyendo su n�mero y la pel�cula que
                 // proyecta. Utiliza los m�todos getNumero y getPelicula de la clase Sala para
                 // obtener esta informaci�n.
-                System.out.println("Sala Numero: " + i );
+                System.out.println("Sala Numero: " + i);
                 System.out.println("Pelicula: " + getSalas()[i].getPelicula().getTitulo());
                 System.out.println("Duraci�n: " + getSalas()[i].getPelicula().getDuracion() + " minutos");
             }
@@ -58,7 +59,7 @@ public class Cine {
          * @param columna parametro desde la clase sala el cual sirve para asignar un valor desde el main con la variable creada desde la clase sala
          * @param email paramatro que nos servira como identificador y recibe
          */
-        public void reservarEntrada(int numSala, int fila, int columna, String email) {
+        public void reservarEntrada ( int numSala, int fila, int columna, String email){
             // Verifica si el n�mero de sala proporcionado est� dentro del rango v�lido, es
             // decir, entre 1 y la longitud del arreglo salas.
             if (numSala >= 1 && numSala <= salas.length) {
@@ -72,5 +73,24 @@ public class Cine {
                 System.out.println("Sala no valida");
             }
         }
+        /**
+         * @param numSala parametro recibido desde la clase sala el cual es un avlor que depende como el propio nombre indica del numero de las salas que se encuentren en el cine
+         */
+        public void verEstadoSala(int numSala) {
+            // Verifica si el n�mero de sala proporcionado est� dentro del rango v�lido, es
+            // decir, entre 1 y la longitud del arreglo salas.
+            if (numSala >= 1 && numSala <= salas.length) {
+                // Obtiene la sala correspondiente al n�mero proporcionado. Debido a que los
+                // �ndices de los arreglos comienzan desde 0, se resta 1 al n�mero de sala.
+                Sala sala = salas[numSala - 1];
+                // Llama al m�todo mostrarEstado de la clase Sala para visualizar el estado de
+                // ocupaci�n de las butacas en la sala espec�fica.
+                sala.mostrarEstado();
+            } else {
+                System.out.println("Sala no valida");
+            }
+        }
+
     }
-}
+
+
