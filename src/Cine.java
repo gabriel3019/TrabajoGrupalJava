@@ -50,5 +50,27 @@ public class Cine {
                 System.out.println("Duraci�n: " + getSalas()[i].getPelicula().getDuracion() + " minutos");
             }
         }
+        /**
+         *
+         * @param numSala parametro recibido desde la clase sala
+         *               para dar el valor de numero de salas como el propio nombre indica
+         * @param fila parametro desde la clase sala el cual sirve para asignar la fila desde el main con la variable ejecutada desde la clase sala
+         * @param columna parametro desde la clase sala el cual sirve para asignar un valor desde el main con la variable creada desde la clase sala
+         * @param email paramatro que nos servira como identificador y recibe
+         */
+        public void reservarEntrada(int numSala, int fila, int columna, String email) {
+            // Verifica si el n�mero de sala proporcionado est� dentro del rango v�lido, es
+            // decir, entre 1 y la longitud del arreglo salas.
+            if (numSala >= 1 && numSala <= salas.length) {
+                // Obtiene la sala correspondiente al n�mero proporcionado. Debido a que los
+                // �ndices de los arreglos comienzan desde 0, se resta 1 al n�mero de sala.
+                Sala sala = salas[numSala - 1];
+                // Llama al m�todo reservarButaca de la clase Sala para realizar la reserva de
+                // la butaca en la sala espec�fica.
+                sala.reservarButaca(fila, columna, email);
+            } else {
+                System.out.println("Sala no valida");
+            }
+        }
     }
 }
